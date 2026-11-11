@@ -1,0 +1,116 @@
+
+# ENGINEERING UNIT CONVERTER
+# CTE123 Python Mini Project
+
+# This list stores previous conversions.
+conversion_history = []
+
+
+# Function to get a valid numerical input.
+def get_number():
+    while True:
+        try:
+            value = float(input("Enter the value to convert: "))
+            return value
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+
+# Function to display the conversion menu.
+def show_menu():
+    print("\n===== ENGINEERING UNIT CONVERTER =====")
+    print("1. Millimetres to Inches")
+    print("2. Inches to Millimetres")
+    print("3. Celsius to Fahrenheit")
+    print("4. Fahrenheit to Celsius")
+    print("5. Kilograms to Pounds")
+    print("6. Pounds to Kilograms")
+    print("7. Kilometres/hour to Metres/second")
+    print("8. Metres/second to Kilometres/hour")
+    print("9. View Conversion History")
+    print("0. Exit")
+
+
+# Function that performs the selected conversion.
+def convert(choice, value):
+
+    if choice == 1:
+        result = value / 25.4
+        description = f"{value} mm = {result:.2f} inches"
+
+    elif choice == 2:
+        result = value * 25.4
+        description = f"{value} inches = {result:.2f} mm"
+
+    elif choice == 3:
+        result = (value * 9 / 5) + 32
+        description = f"{value} °C = {result:.2f} °F"
+
+    elif choice == 4:
+        result = (value - 32) * 5 / 9
+        description = f"{value} °F = {result:.2f} °C"
+
+    elif choice == 5:
+        result = value * 2.20462
+        description = f"{value} kg = {result:.2f} lb"
+
+    elif choice == 6:
+        result = value / 2.20462
+        description = f"{value} lb = {result:.2f} kg"
+
+    elif choice == 7:
+        result = value / 3.6
+        description = f"{value} km/h = {result:.2f} m/s"
+
+    elif choice == 8:
+        result = value * 3.6
+        description = f"{value} m/s = {result:.2f} km/h"
+
+    else:
+        return None
+
+    return description
+
+
+# Main program.
+def main():
+
+    while True:
+        show_menu()
+
+        try:
+            choice = int(input("Select an option: "))
+
+            if choice == 0:
+                print("Thank you for using the converter.")
+                break
+
+            elif choice == 9:
+                print("\n===== CONVERSION HISTORY =====")
+
+                if len(conversion_history) == 0:
+                    print("No conversions have been made yet.")
+                else:
+                    for item in conversion_history:
+                        print(item)
+
+            elif 1 <= choice <= 8:
+                value = get_number()
+                answer = convert(choice, value)
+
+                print("\nConversion Result:")
+                print(answer)
+
+                # Save the result in the history list.
+                conversion_history.append(answer)
+
+            else:
+                print("Invalid menu option. Choose from 0 to 9.")
+
+        except ValueError:
+            print("Please enter a valid menu number.")
+
+
+# Run the program.
+if __name__ == "__main__":
+    main()
