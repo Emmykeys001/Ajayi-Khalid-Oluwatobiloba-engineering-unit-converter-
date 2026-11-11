@@ -1,47 +1,48 @@
 # Ajayi-Khalid-Oluwatobiloba-engineering-unit-converter-
-A Python-based engineering unit converter for length, temperature, mass and speed.
-Ohm's Law and Power Calculator
+A Python-based engineering unit converter for length, temperature, mass and speed
+Engineering Unit Converter
 
 What it does
 
-This is a Python program that helps users calculate important electrical values using Ohm's Law. A user can select whether to calculate voltage, current, resistance or electrical power, enter the required values, and receive the result with the correct unit.
+The Engineering Unit Converter is a Python application that performs common engineering unit conversions. It allows users to convert measurements involving length, temperature, mass and speed.
+
+The program uses a menu system to make it easy to select a conversion and enter a value.
 
 How to run it
 
-1. Install Python 3 on your computer.
-2. Download or clone this repository.
-3. Open the project folder in your terminal.
-4. Run:
+1. Install Python 3.
+2. Save the code as "engineering_unit_converter.py".
+3. Open your terminal in the project folder.
+4. Run the command below:
 
-python ohms_law_power_calculator.py
+python engineering_unit_converter.py
 
 Sample output
 
-OHM'S LAW AND POWER CALCULATOR
+===== ENGINEERING UNIT CONVERTER =====
+1. Millimetres to Inches
+2. Inches to Millimetres
+3. Celsius to Fahrenheit
 
-1. Calculate Voltage
-2. Calculate Current
-3. Calculate Resistance
-4. Calculate Power
-0. Exit
+Select an option: 1
+Enter the value to convert: 100
 
-Enter your choice: 1
-
-Enter current in amperes: 2
-Enter resistance in ohms: 5
-
-Voltage = 10.00 V
-Power = 20.00 W
+Conversion Result:
+100.0 mm = 3.94 inches
 
 My own twist
 
-I added a circuit summary feature that displays the calculated voltage, current, resistance and power together after a calculation. The program also keeps a history of previous calculations so users can review their results before exiting.
+I added two extra features to improve the program:
+
+1. Reverse Conversion: Users can convert measurements in both directions instead of being limited to one direction.
+2. Conversion History: The program stores previous conversion results and allows users to review them.
 
 What I learned
 
-I improved my understanding of Python functions, loops, conditional statements and input validation. I also learned how programming can be used to solve basic electrical engineering problems.
+I learned how to use Python functions, loops, conditional statements and lists to build a menu-driven application. I also gained experience applying mathematical formulas and handling invalid user input.
 
 Author
 Ajayi Khalid Oluwatobiloba 
+Name: 
 Level: ND1
 Institution: Yaba College of Technology (YABATECH)
