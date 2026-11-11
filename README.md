@@ -43,6 +43,5 @@ I learned how to use Python functions, loops, conditional statements and lists t
 
 Author
 Ajayi Khalid Oluwatobiloba 
-Name: 
 Level: ND1
 Institution: Yaba College of Technology (YABATECH)
